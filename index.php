@@ -98,6 +98,7 @@
         <th>Họ tên</th>
         <th>ĐTB</th>
         <th>Xếp loại</th>
+        <th>Học bổng</th>
       </tr>
       <?php if (!empty($students)) { ?>
         <?php foreach($students as $student) {
@@ -111,6 +112,7 @@
             <td><?= $student['hoten'] ?></td>
             <td><?= $student['DTB'] ?></td>
             <td><?= $student['xeploai'] ?></td>
+            <td><?= ($student['DTB']>=0 && $student['diemphp']>=7 && $student['diemmysql']>=7 && $student['diemhtml']>=7) ? 'Đủ điều kiện học bổng' : 'Không đủ điều kiện học bổng' ?></td>
           </tr>
         <?php } ?>
       <?php } else { ?>

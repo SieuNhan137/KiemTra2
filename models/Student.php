@@ -58,4 +58,20 @@
         return $errors;
       }
     }
+    public static function DeleteStudent($pdo, $mssv) {
+      $errors = [];
+      $query = 'DELETE FROM students WHERE mssv = ?';
+      $stmt = $pdo->prepare($query);
+      $stmt->execute([$mssv]);
+      if ($stmt->rowCount()>0) {
+        header('Location: index.php');
+        exit();
+      }
+      else {
+        $errors['mssv'] = [
+          'message' => 'Mã số sinh viên không tồn tại hoặc không hợp lệ!'
+        ];
+        return $errors;
+      }
+    }
   }
