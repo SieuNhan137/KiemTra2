@@ -10,15 +10,14 @@ const diemphpFormInp = themSinhVienForm.querySelector('input[name=diemphp]');
 const diemmysqlFormInp = themSinhVienForm.querySelector('input[name=diemmysql]');
 const diemhtmlFormInp = themSinhVienForm.querySelector('input[name=diemhtml]');
 
-let isOverlaying = false;
 
-overlay.onclick = (e) => {
-  isOverlaying = false;
-  overlay.classList.add('hidden');
+document.getElementById('closeOverlay').onclick = () => {
+  if (!overlay.classList.contains('hidden')) {
+    overlay.classList.add('hidden');
+  }
 }
 openThemSinhVienForm.onclick = () => {
-  if (!isOverlaying) {
-    isOverlaying = true;
+  if (overlay.classList.contains('hidden')) {
     overlay.classList.remove('hidden');
   }
 }

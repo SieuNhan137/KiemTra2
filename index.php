@@ -27,8 +27,8 @@
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-  <div id="overlay" class="hidden">
-    <div id="themOverlay" class="">
+  <div id="overlay" class="<?= (empty($errors['themSinhVien'])) ? 'hidden' : '' ?>">
+    <div id="themOverlay">
       <button id="closeOverlay">x</button>
       <table>
         <tr>
@@ -76,7 +76,9 @@
           </td>
         </tr>
       </table>
-      <button id="themSinhVienBtn">Thêm</button>
+      <div class="centerWrapper">
+        <button id="themSinhVienBtn">Thêm</button>
+      </div>
       <form action="index.php?action=themSinhVien" method="post" id="themSinhVienForm">
         <input type="hidden" name="mssv">
         <input type="hidden" name="hoten">

@@ -67,17 +67,13 @@ body {
   flex-direction: column;
 }
 
-#overlay:hover {
-  cursor: pointer;
-}
-
 #themOverlay {
   background-color: white;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   gap: 0.8rem;
   width: auto;
 }
@@ -87,6 +83,12 @@ body {
   border: 1px solid black;
 }
 
+#themOverlay table td {
+  width: 10rem;
+  text-wrap: wrap;
+  min-height: 2rem;
+}
+
 #themOverlay table th {
   padding: 0.2rem 0.1rem;
 }
@@ -94,6 +96,7 @@ body {
 #themOverlay table input {
   all: unset;
   padding: 0.2rem 0.1rem;
+  width: 100%;
 }
 
 #themOverlay table input:focus {
@@ -106,4 +109,31 @@ body {
 
 #themSinhVienBtn:hover {
   cursor: pointer;
+}
+
+#closeOverlay {
+  background-color: transparent;
+  color: red;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  padding: 0.3rem;
+}
+
+#closeOverlay:hover {
+  cursor: pointer;
+}
+
+.centerWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorMessage {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: red;
+  padding: 0.1rem;
 }
