@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none !important;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(230, 230, 230);
+  position: relative;
+}
+
+.mainContentWrapper {
+  margin-top: 5rem;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.mainContentWrapper table,
+#themOverlay table {
+  border-collapse: collapse;
+}
+
+.mainContentWrapper table td,
+.mainContentWrapper table th {
+  padding: 1rem;
+  text-align: center;
+}
+
+.mainContentWrapper table th,
+#themOverlay table th {
+  background-color: rgb(0, 110, 255);
+  color: white;
+}
+
+.mainContentWrapper table td {
+  background-color: white;
+}
+
+#openThemSinhVienForm {
+  padding: 0.3rem;
+  font-weight: bold;
+}
+
+#openThemSinhVienForm:hover {
+  cursor: pointer;
+}
+
+#overlay {
+  background-color: rgba(0, 0, 0, 0.137);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#overlay:hover {
+  cursor: pointer;
+}
+
+#themOverlay {
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  width: auto;
+}
+
+#themOverlay table {
+  width: 100%;
+  border: 1px solid black;
+}
+
+#themOverlay table th {
+  padding: 0.2rem 0.1rem;
+}
+
+#themOverlay table input {
+  all: unset;
+  padding: 0.2rem 0.1rem;
+}
+
+#themOverlay table input:focus {
+  background-color: rgb(226, 226, 226);
+}
+
+#themSinhVienBtn {
+  padding: 0.2rem 1rem;
+}
+
+#themSinhVienBtn:hover {
+  cursor: pointer;
+}
